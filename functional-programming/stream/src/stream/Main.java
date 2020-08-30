@@ -145,6 +145,9 @@ public class Main {
 		System.out.println(animalMap);
 		
 		
+		Map<Integer, Long> cMap = animalList.stream().collect(Collectors.groupingBy(String::length,  Collectors.counting()));
+		System.out.println(cMap);
+		
 		
 	}
 
