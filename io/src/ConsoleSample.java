@@ -3,7 +3,14 @@ public class ConsoleSample {
 
     public static void main(String[] args){
 
-        System.out.println("hello");
+        Console console = System.console();
+
+        if (console != null) {
+            String userInput = console.readLine();
+
+            console.writer().println("You entered the following: " + userInput);
+        }
+
 
     }
 }
