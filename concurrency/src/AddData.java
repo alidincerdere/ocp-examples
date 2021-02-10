@@ -13,6 +13,13 @@ public class AddData {
 		try {
 			service = Executors.newSingleThreadExecutor();
 			Future<Integer> result = service.submit(()->30+11);
+			//since callable supports a return type when used with executor service
+			//it is often preferred over Runnable when using Concurrency API
+
+			//Callable return generic type
+			//Runnable returns void
+			//Callable can throw checked exception
+			//Runnable does not throw
 			System.out.println(result.get());
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

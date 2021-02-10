@@ -9,7 +9,8 @@ public class ZooInfo {
 		ExecutorService service = null;
 		
 		try {
-			
+			//main method is another thread
+			//and theere is below new single thread
 			service = Executors.newSingleThreadExecutor();
 			
 			service.execute(()-> {System.out.println("Printing zoo inventory");});
